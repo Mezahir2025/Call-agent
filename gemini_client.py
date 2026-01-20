@@ -18,7 +18,7 @@ class GeminiClient:
             raise ValueError("GEMINI_API_KEY is required")
         
         self.client = genai.Client(api_key=api_key, http_options={"api_version": "v1alpha"})
-        self.model_name = "gemini-2.5-flash-native-audio-preview" # Or updated model name
+        self.model_name = "gemini-2.0-flash-exp" # Switching to confirmed Live API model
         self.voice_name = "Aoede" # Example typical voice, but we'll try to configure for Azerbaijani if possible via prompt since config is limited in preview
         
     async def generate_response(self, text_input: str):
