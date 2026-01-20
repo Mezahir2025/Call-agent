@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/chat",
+        "run": {
+          "serviceId": "call-agent-proxy",
+          "region": "us-central1"
+        }
+      }
+    ]
+  }
+}
